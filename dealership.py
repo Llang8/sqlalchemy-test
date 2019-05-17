@@ -46,7 +46,7 @@ class Invoice(Base):
     amount = Column(Numeric(9,2))
     invoice_date = Column(Date)
 
-    inventory_car = relationship('InventoryCar', backref='inventory_car')
+    inventory_car = relationship('InventoryCar', backref='inventorycar')
     customer = relationship('Customer', backref='customer')
     salesperson = relationship('Salesperson', backref='salesperson')
 
@@ -60,7 +60,7 @@ class Service(Base):
     amount = Column(Numeric(9,2))
     service_date = Column(Date)
     
-    customer_car = relationship('CustomerCar', backref='customer_car')
+    customer_car = relationship('CustomerCar', backref='customercar')
     mechanic = relationship('Mechanic', backref='mechanic')
     part = relationship('Part', backref='part')
 
